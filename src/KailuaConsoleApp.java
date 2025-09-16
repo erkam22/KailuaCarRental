@@ -3,7 +3,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
-
 public class KailuaConsoleApp {
     private static final String URL = "jdbc:mysql://localhost:3306/KailuaCarRental?serverTimezone=UTC";
     private static final String USER = "root";
@@ -18,7 +17,6 @@ public class KailuaConsoleApp {
 
     public static void main(String[] args) {
         try {
-
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
@@ -58,7 +56,6 @@ public class KailuaConsoleApp {
         System.out.print("Vælg: ");
     }
 
-    //cars
     private void manageCars() {
         while (true) {
             System.out.println("\n-- Cars Menu --");
@@ -183,7 +180,6 @@ public class KailuaConsoleApp {
         }
     }
 
-    // CUSTOMERS
     private void manageCustomers() {
         while (true) {
             System.out.println("\n-- Customers Menu --");
@@ -310,7 +306,6 @@ public class KailuaConsoleApp {
         }
     }
 
-    // RENTALS
     private void manageRentals() {
         while (true) {
             System.out.println("\n-- Rentals Menu --");
